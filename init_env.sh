@@ -6,7 +6,7 @@ mkdir -p /data/tools
 mkdir -p /data/workspace
 
 # 安装依赖包
-yum install -y curl zip unzip dos2unix
+yum install -y curl zip unzip dos2unix vim
 yum remove openssl openssh-server openssh
 yum install openssl openssh-server openssh
 
