@@ -7,6 +7,8 @@ mkdir -p /data/workspace
 
 # 安装依赖包
 yum install -y curl zip unzip dos2unix
+yum remove openssl openssh-server openssh
+yum install openssl openssh-server openssh
 
 # 配置Google Cloud SDK的yum仓库
 cat <<EOF > /etc/yum.repos.d/google-cloud-sdk.repo
