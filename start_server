@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+mkdir -p /data/workspace/java_space/is_server
+mkdir -p /data/workspace/py_space/tele_bot
+
+gsutil cp gs://dfjn_3fb3_dhz_827c_2nv2/package.zip /data/workspace/py_space/tele_bot
+gsutil cp gs://dfjn_3fb3_dhz_827c_2nv2/runtime.zip /data/workspace/java_space/is_server
+
+/data/tools/server_env/start_mongo.sh
+
+cd /data/workspace/java_space/is_server/
+unzip runtime.zip
+cd runtime
+chmod +x *.sh
+./start.sh
+
+cd /data/workspace/py_space/tele_bot/
+unzip package.zip
+python -m venv venv
+venv/bin/pip install -r requirements.txt
