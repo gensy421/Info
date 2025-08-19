@@ -3,7 +3,11 @@ set -e
 
 # 创建目录
 mkdir -p /data/tools
-mkdir -p /data/workspace
+mkdir -p /data/workspace/cn/java_space
+mkdir -p /data/workspace/cn/tele_space
+
+mkdir -p /data/workspace/en/java_space
+mkdir -p /data/workspace/en/tele_space
 
 # 安装依赖包
 yum install -y curl zip unzip dos2unix vim
