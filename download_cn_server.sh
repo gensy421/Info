@@ -1,1 +1,1 @@
-gsutil cp gs://serv_env/env/runtime_cn.zip /data/workspace/cn/java_space
+gsutil cp gs://serv_env/runtime_cn.zip /data/workspace/cn/java_space
